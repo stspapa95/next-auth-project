@@ -1,5 +1,51 @@
 import { createTheme } from "@mantine/core";
 
 export const theme = createTheme({
-  /** Put your mantine theme override here */
+  fontFamily: "Lato, sans-serif",
+  fontSizes: {
+    xs: "10px",
+    sm: "14px",
+    md: "16px",
+    lg: "24px",
+    xl: "32px",
+    xxl: "40px",
+  },
+  colors: {
+    "blue-gray": [
+      "#f3f3fe",
+      "#e4e6ed",
+      "#c8cad3",
+      "#a9adb9",
+      "#9093a4",
+      "#808496",
+      "#767c91",
+      "#656a7e",
+      "#585e72",
+      "#4a5167",
+    ],
+    "light-blue": [
+      "#e0fbff",
+      "#cbf2ff",
+      "#9ae2ff",
+      "#64d2ff",
+      "#3cc5fe",
+      "#23bcfe",
+      "#09b8ff",
+      "#00a1e4",
+      "#0090cd",
+      "#007cb5",
+    ],
+    "deep-red": [
+      "#ffeaec",
+      "#fdd4d6",
+      "#f4a7ac",
+      "#ec777e",
+      "#e64f57",
+      "#e3353f",
+      "#e22732",
+      "#c91a25",
+      "#b31220",
+      "#9e0419",
+    ],
+  },
 });
