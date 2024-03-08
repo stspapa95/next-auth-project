@@ -15,7 +15,7 @@ export default function Home() {
 
         <div className={"flex justify-center"}>
           <LoginButtonWrapper>
-            <Button variant={"filled"} size={"md"} color={"light-blue.5"}>
+            <Button variant={"filled"} size={"md"} color={"primary.5"}>
               Sign in
             </Button>
           </LoginButtonWrapper>

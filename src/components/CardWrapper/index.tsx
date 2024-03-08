@@ -4,17 +4,22 @@ import { Box, Button, Card, Group, Stack, Text } from "@mantine/core";
 
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
+import { Registration } from "@/model";
 
 type CardWrapperProps = {
   children: React.ReactNode;
   header: string;
   showSocial?: boolean;
+  backButtonLabel: string;
+  backButtonHref: string;
 };
 
 const CardWrapper = ({
   children,
   header,
   showSocial = false,
+  backButtonLabel,
+  backButtonHref,
 }: CardWrapperProps) => {
   return (
     <Card shadow={"xs"} padding={"lg"} radius={"lg"} withBorder w={400}>
@@ -22,7 +27,7 @@ const CardWrapper = ({
         <Text size={"xxl"} fw={500}>
           🔐Auth
         </Text>
-        <Text size={"md"} c={"blue-gray.4"}>
+        <Text size={"md"} c={"secondary.4"}>
           {header}
         </Text>
 
@@ -53,8 +58,8 @@ const CardWrapper = ({
 
         <Box mt={16}>
           <Group gap={4}>
-            <Text size={"sm"}>Don&apos;t have an account?</Text>
-            <Link href={"/auth/register"}>
+            <Text size={"sm"}>{backButtonLabel}</Text>
+            <Link href={backButtonHref}>
               <Text
                 size={"sm"}
                 fw={"bold"}
@@ -62,7 +67,7 @@ const CardWrapper = ({
                   cursor: "pointer",
                 }}
               >
-                Sign up
+                {backButtonLabel === Registration.LOGIN ? "Sign up" : "Sign in"}
               </Text>
             </Link>
           </Group>
