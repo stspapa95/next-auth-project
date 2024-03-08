@@ -2,6 +2,13 @@ import { createTheme } from "@mantine/core";
 
 export const theme = createTheme({
   fontFamily: "Lato, sans-serif",
+  spacing: {
+    xs: "4px",
+    sm: "8px",
+    md: "16px",
+    lg: "24px",
+    xl: "32px",
+  },
   fontSizes: {
     xs: "10px",
     sm: "14px",

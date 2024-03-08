@@ -1,13 +1,10 @@
 import { Button, Text } from "@mantine/core";
 import LoginButtonWrapper from "@/components/LoginButtonWrapper";
+import DefaultLayout from "@/components/DefaultLayout";
 
 export default function Home() {
   return (
-    <main
-      className="flex h-screen flex-col items-center justify-center
-    bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]
-    from-sky-500 to blue-800"
-    >
+    <DefaultLayout>
       <div className={"space-y-3"}>
         <Text c={"#FFF"} size={"xxl"} fw={500} ta={"center"}>
           🔐Auth
@@ -24,6 +21,6 @@ export default function Home() {
           </LoginButtonWrapper>
         </div>
       </div>
-    </main>
+    </DefaultLayout>
   );
 }

@@ -1,12 +1,15 @@
 import React from "react";
-import { Text } from "@mantine/core";
+import DefaultLayout from "@/components/DefaultLayout";
+import CardWrapper from "@/components/CardWrapper";
 
-const Login = () => {
+const LoginPage = () => {
   return (
-    <div>
-      <Text>This is a login page.</Text>
-    </div>
+    <DefaultLayout>
+      <CardWrapper header={"We're A Team That Guides Each Other"} showSocial>
+        This is a login page.
+      </CardWrapper>
+    </DefaultLayout>
   );
 };
 
-export default Login;
+export default LoginPage;
