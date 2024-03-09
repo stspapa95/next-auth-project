@@ -1,5 +1,6 @@
 import React, { useState, useTransition } from "react";
 import { useForm, UseFormReturnType } from "@mantine/form";
+import { z } from "zod";
 import { zodResolver } from "mantine-form-zod-resolver";
 
 import {
@@ -14,14 +15,16 @@ import {
 import { MdAlternateEmail, MdEmail } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
 
-import { RegisterFormReturnType, RegisterSchema } from "@/model";
+import { RegisterSchema } from "@/model";
+
+type RegisterFormType = z.infer<typeof RegisterSchema>;
 
 const RegisterForm = () => {
   const theme = useMantineTheme();
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [isPending, startTransition] = useTransition();
 
-  const form: UseFormReturnType<RegisterFormReturnType> = useForm({
+  const form: UseFormReturnType<RegisterFormType> = useForm({
     initialValues: {
       name: "",
       email: "",
@@ -30,7 +33,7 @@ const RegisterForm = () => {
     validate: zodResolver(RegisterSchema),
   });
 
-  const handleSubmit = (values: RegisterFormReturnType) => {
+  const handleSubmit = (values: RegisterFormType) => {
     startTransition(() => {
       console.log(values);
       setShowSuccessMessage(true);

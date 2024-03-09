@@ -2,7 +2,7 @@ import React from "react";
 import DefaultLayout from "@/components/DefaultLayout";
 import CardWrapper from "@/components/CardWrapper";
 import LoginForm from "@/components/LoginForm";
-import { Registration } from "@/model";
+import { Authentication } from "@/model";
 
 const LoginPage = () => {
   return (
@@ -10,7 +10,7 @@ const LoginPage = () => {
       <CardWrapper
         header={"We're A Team That Guides Each Other"}
         showSocial
-        backButtonLabel={Registration.LOGIN}
+        backButtonLabel={Authentication.LOGIN}
         backButtonHref={"/auth/register"}
       >
         <LoginForm />

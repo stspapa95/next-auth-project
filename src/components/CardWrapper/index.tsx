@@ -4,7 +4,7 @@ import { Box, Button, Card, Group, Stack, Text } from "@mantine/core";
 
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import { Registration } from "@/model";
+import { Authentication } from "@/model";
 
 type CardWrapperProps = {
   children: React.ReactNode;
@@ -67,7 +67,7 @@ const CardWrapper = ({
                   cursor: "pointer",
                 }}
               >
-                {backButtonLabel === Registration.LOGIN ? "Sign up" : "Sign in"}
+                {backButtonLabel === Authentication.LOGIN ? "Sign up" : "Sign in"}
               </Text>
             </Link>
           </Group>
